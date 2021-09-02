@@ -1,0 +1,129 @@
+1. Fa‡a um programa que receba 10 n£meros e mostre a soma dos n£meros ¡mpares e a soma dos n£meros pares.
+contador = 1
+par = 0
+impar = 0
+while(contador <= 10):
+    a = int(input(f'Digite o valor do {contador}ø n£mero'))
+    if(a % 2 == 0):
+        par += a
+    else:
+        impar += a
+        
+    contador = contador + 1
+
+ 
+
+        
+if(par != 0):
+    print(f'A soma dos n£meros pares digitados ‚: {par} e a soma dos n£meros impares ‚ {impar}')
+else: 
+    print(f'A soma de n£meros impares ‚ {impar} e nÆo foram digitado n£meros pares')
+
+
+2.    Fa‡a um programa que leia a idade, altura e peso de 10 pessoas e mostre:
+a. o n£mero de pessoas com idade maior que 50;
+b. a m‚dia das alturas das pessoas com menos de 70 e mais de 50 anos;
+c. a porcentagem de pessoas com menos de 50 quilos.
+    
+
+contador = 1
+idadeMaior = 0
+mediaAltura = 0
+pesoMenor = 0
+media = 0
+while(contador <= 10):
+    idade = int(input(f'Digite a idade da pessoa n£mero {???????contador}???????\n'))    
+    altura = float(input(f'Digite sua altura da pessoa n£mero {???????contador}???????\n'))
+    peso = float(input(f'Digite sua seu peso da pessoa n£mero {???????contador}???????\n'))
+
+
+    if(idade > 50):
+        idadeMaior = idadeMaior + 1
+    
+    if(idade < 70 and idade > 50):
+        mediaAltura = mediaAltura + 1
+        media += altura
+
+
+    if(peso < 50):
+        pesoMenor = pesoMenor + 1
+        
+        
+        
+    contador = contador + 1
+    
+media = media/mediaAltura
+if(pesoMenor != 0):
+    porcentagem = (pesoMenor/10) * 100
+else:
+    porcentagem = 0
+
+
+print(f'O n£mero de pessoas com idade superior a 50 anos ‚: {???????idadeMaior}???????')
+print(f'A m‚dia das alturas das pessoas com menos de 70 anos e mais de 50 anos ‚: {???????media}???????')
+print(f'A porcentagem das pessoas com menos de 50 quilo ‚: {???????porcentagem}??????? porcento')
+
+
+3. A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o sal rio e o n£mero de filhos. A prefeitura deseja saber:
+a. a m‚dia do sal rio da popula‡Æo;
+b. a m‚dia do n£mero de filhos;
+c. o maior sal rio;
+d. a porcentagem de pessoas com sal rio at‚ R$ 1500,00.
+Fa‡a um programa que receba os dados de 10 habitantes e exiba um relat¢rio com os valores pedidos.
+
+ 
+
+
+contador = 1
+mediaSalario = 0
+mediaFilhos = 0
+salarioMaior = 0
+maiorSalario = 0
+while(contador <= 10):
+    salario = float(input(f'O sal rio da pessoa n£mero {contador}\n'))    
+    filhos = int(input(f'O n£mero de filhos da pessoa n£mero {contador}\n'))
+    
+    if(maiorSalario < salario):
+        maiorSalario = salario
+
+ 
+
+    mediaSalario += salario
+    mediaFilhos += filhos
+
+ 
+
+    if(salario >= 1500.00 ):
+        salarioMaior += 1
+        
+    contador += 1
+    
+
+ 
+
+if(salarioMaior != 0):
+    porcentagem = (salarioMaior/10) * 100
+else:
+    porcentagem = 0
+
+ 
+
+mediaSalario = mediaSalario/10
+mediaFilhos = mediaFilhos/10
+
+ 
+
+print(f'A m‚dia do sal rio da popula‡Æo ‚: {mediaSalario}')
+print(f'A m‚dia de filhos da popula‡Æo ‚: {mediaFilhos}')
+print(f'O maior sal rio ‚: R${maiorSalario}')
+print(f'A porcentagem de pessoas com sal rio at‚ R$ 1500,00 ‚: {porcentagem} por cento')
+
+
+
+
+
+
+	
+	
+	
+	

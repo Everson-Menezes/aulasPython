@@ -1,0 +1,84 @@
+1) Fa‡a um programa em Python para escrever os n£meros pares entre 0 e 500.
+
+for variavel in range(0, 501, 1):
+    if (variavel % 2 == 0):
+        print("o n£mero ", variavel, "‚ par")
+
+2) Fa‡a um programa em Python que conte de 1 a 100 e a cada m£ltiplo de 10 emita uma mensagem: "M£ltiplo de 10".
+
+for variavel in range(1, 101, 1):
+    if (variavel % 10 == 0):
+        print("o n£mero ", variavel, "‚ multiplo de 10")
+    else:
+        print("o n£mero ", variavel)
+
+3) Fa‡a um programa em Python para ler dois n£meros inteiros representando um intervalo e escrever em ordem crescente todos os n£meros ¡mpares do intervalo.
+
+print("Digite dois n£meros inteiros")
+a = int(input())
+b = int(input())
+for variavel in range(a, b, 1):
+    if (variavel % 2 == 1):
+        print("o n£mero ", variavel, "‚ inpar")
+
+4) Fa‡a um programa em Python para ler 10 n£meros inteiros e escrever a soma e a m‚dia dos n£meros lidos.
+
+print("Digite dois n£meros inteiros")
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+f = int(input())
+g = int(input())
+h = int(input())
+i = int(input())
+j = int(input())
+media = (a + b + c + d + e + f + g + h + i + j)/10
+print("a m‚dia da some de todos os n£meros ‚: ", media)
+ 
+5) Fa‡a um programa em Python para ler um valor N e em seguida ler N n£meros inteiros e escrever o maior n£mero lido.
+
+print("Digite um n£mero inteiro")
+a = int(input())
+maior = 0
+for variavel in range(1, a+1, 1):
+    print("Digite outro n£mero inteiro")
+    b = int(input())
+    if (maior <= b):
+        maior = b
+print("o maior n£mero lido ‚: ", maior)
+
+6) Fa‡a um programa em Python para ler 20 n£meros inteiros, em seguida escrever o menor valor lido e quantas vezes este ocorreu nos n£meros lidos.
+
+print("Digite um n£mero inteiro")
+menor = int(input())
+contador = 0
+for variavel in range(0, 20, 1):
+    print("Digite outro n£mero inteiro")
+    b = int(input())
+    if(menor >= b):
+        menor = b
+        contador = contador + 1        
+print("o menor n£mero lido ‚: ", menor, "a atribui‡Æo ocorreu ", contador, "vezes")
+
+7) Fa‡a um programa em Python para ler o valor de 15 sal rios, e escreva quais os trˆs maiores valores dos sal rios lidos.
+
+print("Digite um salario")
+salario2 = salario3 = salarioMaior = float(input())
+
+for variavel in range(0, 15, 1):
+    print("Digite outro n£mero inteiro")
+    b = float(input())
+    if(salarioMaior <= b):
+        salario3 = salario2
+        salario2 = salarioMaior
+        salarioMaior = b
+    elif(salario2 <= b):
+        alario3 = salario2
+        salario2 = b
+    elif(salario3 <= b):
+        salario3 = b
+        
+print("os trˆs maiores sal rios sÆo: ", salarioMaior, "; ", salario2, "e ", salario3)
+

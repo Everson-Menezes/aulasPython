@@ -1,0 +1,171 @@
+1. Escreva um programa para ler 2 valores (considere que n∆o ser∆o informados valores iguais) e escrever o maior deles.
+valor1 = int(input('Digite valor 1: '))
+valor2 = int(input('Digite valor 2: '))
+
+if (valor1 > valor2):
+    print(valor1)
+else:
+    print(valor2)
+2. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poder† ou n∆o votar este ano (n∆o Ç necess†rio considerar o màs em que ela nasceu).
+valor1 = int(input('Ano de nascmento: '))
+
+if ((2021 - valor1) > 18):
+    print('vota esse ano')
+else:
+    print('nao vota esse ano')
+
+3. Escreva um programa que verifique a validade de uma senha fornecida pelo usu†rio. A senha v†lida Ç o n£mero 1234. Devem ser impressas as seguintes mensagens: ACESSO PERMITIDO caso a senha seja v†lida. ACESSO NEGADO caso a senha seja inv†lida.
+valor1 = int(input('DIGITE SUA SENHA: '))
+
+if (valor1 == 1234):
+    print('ACESSO PERMITIDO ')
+else:
+    print('ACESSO NEGADO ')
+
+4. As maá∆s custam R$ 0,30 cada se forem compradas menos do que uma d£zia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um programa que leia o n£mero de maá∆s compradas, calcule e escreva o valor total da compra.
+
+
+valor1 = int(input('n£mero de apples compradas: '))
+
+if (valor1 >= 12):
+    valor = valor1 * 0.25
+    print('total compradas: %d' %valor)
+else:
+    valor = valor1 * 0.3
+    print('total compradas: %d' %valor)
+
+5. Escreva um programa para ler 3 valores inteiros (considere que n∆o ser∆o lidos valores iguais) e escrevà-los em ordem crescente.
+
+valor1 = int(input('n£mero 1: '))
+valor2 = int(input('n£mero 2: '))
+valor3 = int(input('n£mero 3: '))
+maior = valor1
+meio =  valor1
+menor = valor1
+if (maior < valor2):
+    maior = valor2
+if (maior < valor3):
+    maior = valor3
+if (menor > valor2):
+    menor = valor2
+if (menor > valor3):
+    menor = valor3
+if (maior == valor1 and menor == valor2):
+    meio = valor3
+if (maior == valor1 and menor == valor3):
+    meio = valor2
+if (maior == valor2 and menor == valor1):
+    meio = valor3
+if (maior == valor3 and menor == valor1):
+    meio = valor2
+
+print('maior: %d' %maior )
+print('meio: %d' %meio )
+print('menor: %d' %menor )
+
+6. Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1:feminino 2:masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes F¢rmulas: - para homens: (72.7 * Altura) - 58 - para mulheres: (62.1 * Altura) - 44.7
+print ('vocà Ç homen ou mulher?')
+print ("1-Mulher ; 2-Homen")
+sexo = int(input ())
+
+print ("Digite sua altura")
+altura = float(input())
+
+if(sexo == 1):
+    ideal = (62.1 * altura) - 44.7
+else:
+    ideal = (72.7 * altura) - 58
+
+print('seu peso ideal Ç: %d' %ideal)
+
+
+7. Escreva um programa para ler o n£mero de lados de um pol°gono regular e a medida do lado (em cm). Calcular e imprimir o seguinte: - Se o n£mero de lados for igual a 3 escrever TRI∂NGULO e o valor da †rea - Se o n£mero de lados for igual a 4 escrever QUADRADO e o valor da sua †rea. - Se o n£mero de lados for igual a 5 escrever PENTµGONO.
+print ("n£mero de lados do poligono")
+lados = int(input ())
+
+print ("medida dos lados")
+medida = float(input())
+
+if(lados == 3):
+    area = ((medida * medida) * 1.732) / 4
+    print('Triangulo: %d' %area)
+    
+if(lados == 4):
+    area = medida * medida
+    print('quadrado: %d' %area)
+    
+if(lados == 5):
+    area = (((medida * medida) * 1.732) / 4) * 5
+    print('pentagono: %d' %area)
+
+
+8. Acrescente as seguintes mensagens Ö soluá∆o do exerc°cio anterior conforme o caso. - Caso o n£mero de lados seja inferior a 3 escrever N«O ê UM POL÷GONO. - Caso o n£mero de lados seja superior a 5 escrever POL÷GONO N«O IDENTIFICADO.
+print ("n£mero de lados do poligono")
+lados = int(input ())
+
+print ("medida dos lados")
+medida = float(input())
+
+if(lados < 3):
+    print('n∆o Ç um poligono')
+if(lados > 5):
+    print('n∆o Ç identificado')
+if(lados == 3):
+    area = ((medida * medida) * 1.732) / 4
+    print('Triangulo: %d' %area)
+    
+if(lados == 4):
+    area = medida * medida
+    print('quadrado: %d' %area)
+    
+if(lados == 5):
+    area = (((medida * medida) * 1.732) / 4) * 5
+    print('pentagono: %d' %area)
+
+
+9. Escreva um programa para ler 3 valores inteiros e escrever o maior deles. Considere que o usu†rio n∆o informar† valores iguais.
+valor1 = int(input('n£mero 1: '))
+valor2 = int(input('n£mero 2: '))
+valor3 = int(input('n£mero 3: '))
+maior = valor1
+if (maior < valor2):
+    maior = valor2
+if (maior < valor3):
+    maior = valor3
+print('maior: %d' %maior )
+
+
+
+10. Escreva um programa que leia as medidas dos lados de um triÉngulo e escreva se ele Ç Equil†tero, Is¢sceles ou Escaleno. Sendo que: - TriÉngulo Equil†tero: possui os 3 lados iguais. - TriÉngulo Is¢scele: possui 2 lados iguais. - TriÉngulo Escaleno: possui 3 lados diferentes.
+
+print ("digite o tamanho do lado 1")
+lado1 = int(input ())
+print ("digite o tamanho do lado 2")
+lado2 = int(input ())
+print ("digite o tamanho do lado 3")
+lado3 = int(input ())
+
+if(lado1 == lado2 or lado2 == lado3 or lado1 == lado3):
+    print('isoscele')
+elif(lado1 == lado2 and lado2 == lado3):
+    print('equilatero')
+else:
+    print('Escaleno')
+
+11. Escreva um programa que leia o valor de 3 Éngulos de um triÉngulo e escreva se o triÉngulo Ç AcutÉngulo, RetÉngulo ou ObtusÉngulo. Sendo que:
+
+- TriÉngulo RetÉngulo: possui um Éngulo reto. (igual a 90ß) 
+
+- TriÉngulo ObtusÉngulo: possui um Éngulo obtuso. (maior que 90ß) 
+
+- TriÉngulo AcutÉngulo: possui tràs Éngulos agudos. (menor que 90ß)
+print ("digite os angulos do triangulo")
+angulo1 = int(input ())
+angulo2 = int(input ())
+angulo3 = int(input ())
+if(angulo1 > 90 or angulo2 > 90 or angulo3 > 90):
+    print('ObtusÉngulo')
+elif(angulo1 == 90 or angulo2 == 90 or angulo3 == 90):
+    print('RetÉngulo')
+elif(angulo1 < 90 and angulo2 < 90 and angulo3 < 90):
+    print('AcutÉngulo')

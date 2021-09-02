@@ -1,0 +1,127 @@
+[20:27] JACQUELINE AUGUSTO DE OLIVEIRA
+1. Elabore um programa que leia um n£mero, e se ele for maior do que 20, escreva a metade desse n£mero, caso contr†rio escreva o pr¢prio n£mero.
+print ('Digite um n£mero')
+n1 = int(input())
+
+if (n1 > 20):
+    n1= n1/2
+    print (n1)
+else:
+    print (n1)
+2. Elabore um programa que leia dois valores, calcule e apresente a divis∆o do maior pelo menor. 
+print ('Digite um n£mero')
+n1 = int(input())
+
+print ('Digite outro n£mero')
+n2 = int(input())
+
+if (n1 > n2):
+    aux = n1/n2
+    print (aux)
+else:
+    aux = n2/n1
+    print (aux)
+3. Faáa um programa para receber um valor e escrever se Ç "positivo" ou "negativo" (considere o valor zero como positivo).
+print ('Digite um n£mero')
+n1 = int(input())
+
+if (n1 >= 0):
+    print ('positivo')
+else:
+    print ('negativo')
+4. Faáa um programa para receber um valor e escrever se Ç "positivo", "negativo" ou "elemento neutro".
+print ('Digite um n£mero')
+n1 = int(input())
+
+if (n1 > 0):
+    print ('positivo')
+elif (n1 < 0):
+    print ('negativo')
+else:
+    print('elemento neutro')
+5. Faáa um programa que receba dois n£meros e apresente o menor valor
+print ('Digite um n£mero')
+n1 = int(input())
+
+print ('Digite outro n£mero')
+n2 = int(input())
+
+if (n1 > n2):
+    print (n2)
+else:
+    print (n1)
+6. Elabore um programa que leia um n£mero e, se ele for positivo, apresente a metade desse n£mero, caso contr†rio apresente o n£mero ao quadrado.
+print ('Digite um n£mero')
+n1 = int(input())
+
+
+if (n1 > 0):
+    print (n1/2)
+else:
+    print (n1*n1)
+7. Elabore um programa que leia um valor e escrever a mensagem ê MAIOR QUE 10! se o valor lido for maior que 10, caso contr†rio escrever N«O ê MAIOR QUE 10!
+print ('Digite um n£mero')
+n1 = int(input())
+
+
+if (n1 > 10):
+    print ('Ç maior que 10')
+else:
+    print ('n∆o Ç maior que 10')
+8. Faáa um programa que receba quatro notas de um aluno, calcule e apresente a mÇdia aritmÇtica das notas e a mensagem "aprovado" ou "reprovado", considerando, para aprovaá∆o, mÇdia 8,0.
+print ('Digite a nota 1')
+n1 = int(input())
+print ('Digite a nota 2')
+n2 = int(input())
+print ('Digite a nota 3')
+n3 = int(input())
+print ('Digite a nota 4')
+n4 = int(input())
+
+if (((n1 + n2 + n3 + n4)/4) >= 8):
+    print ('Aprvado')
+else:
+    print ('Reprovado')
+9. Faáa um programa que leia tràs valores (considere que n∆o ser∆o informados valores iguais) e apresente o maior deles.
+print ('Digite a nota 1')
+n1 = int(input())
+print ('Digite a nota 2')
+n2 = int(input())
+print ('Digite a nota 3')
+n3 = int(input())
+
+maior = n1
+
+if maior < n2:
+	maior = n2
+
+if maior < n3: 
+	maior = n3
+
+
+print ('Maior:  %d ' %maior)
+10. As maá∆s custam R$ 1,30 cada se forem compradas menos de uma d£zia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um programa que leia o n£mero de maá∆s compradas, calcule e escreva o custo total da compra.
+print ('Digite numero de apples')
+n1 = int(input())
+
+if (n1 >= 12):
+    print('total comprado:$ %d' %n1)
+else:
+    n2 = n1 * 1.3
+    print('total compradp:$ %d' %n2)
+11. A jornada de trabalho semanal de um funcion†rio Ç de 40 horas. O funcion†rio que trabalhar mais de 40 horas receber† hora extra, cujo c†lculo Ç o valor da hora regular com um acrÇscimo de 50%. Escreva um programa que leia o n£mero de horas trabalhadas em um màs, o sal†rio por hora e escreva o sal†rio total do funcion†rio, que dever† ser acrescido das horas extras, caso tenham sido trabalhadas (considere que o màs possua 4 semanas exatas).
+print ('Digite numero de horas trabalhadas')
+n1 = int(input())
+
+print ('Digite o valor da hora')
+n2 = int(input())
+
+if (n1 > 160):
+    salario = 160 * n2
+    salarioextra = (n1 - 160) * (n2 * 1.5)
+    mes = salarioextra + salario
+    print('total mes:$ %d' %mes)
+else:
+    salario = n1 * n2
+    print('total mes:$ %d' %salario)
+

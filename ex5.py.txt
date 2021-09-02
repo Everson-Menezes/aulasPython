@@ -1,0 +1,173 @@
+1) Fa‡a um programa que leia n£mero inteiros  maiores que zero. Quando for digitado o n£mero zero, o programa dever  apresentar quantos n£meros foram digitados  e a m‚dia dos mesmos. 
+
+numeros = int(input('Digite um n£mero inteiro\n'));
+contador = 0;
+media = 0;
+while(numeros != 0):
+	media = media + numeros;
+	if(numeros > 0):
+		contador = contador + 1;
+	numeros = int(input('Digite um n£mero inteiro\n'));
+else:
+	media = media / contador;
+	print(f"Foram digitados {contador} n£meros validos e a m‚dia dos n£meros digitados ‚: {media}");
+	
+	
+2) Fa‡a um programa que receba uma senha formada de quatro n£meros inteiros, verifique se a senha est  correta e, caso nÆo esteja, solicite novamente a senha. Se a senha digitada for a correta, dever  ser apresentada a mensagem "Senha Correta", caso contr rio, "Senha Incorreta". 
+
+senha = int(input('Digite uma senha formada de quatro n£meros inteiros: \n'));
+
+senhaValida = 1435;
+while(senha != senhaValida):
+	print("Senha Incorreta!");
+	senha = int(input('Digite uma senha formada de quatro n£meros inteiros: \n'));
+else:
+	print("Senha Correta!");
+	
+3) Fa‡a um programa que simule uma urna eletr“nica. A tela a ser apresentada dever  ser da seguinte forma: 
+
+As op‡äes sÆo:
+
+1. Candidato Mauro Ubando 
+
+2. Candidato Kay Xadois
+
+3. Candidato Fikaru Riko 
+
+4. Nulo 
+
+5. Branco
+
+6. Terminar 
+
+Entre com o seu voto: 
+
+ 
+
+O programa dever  ler os votos dos eleitores e, quando for digitado o n£mero 6, apresentar as seguintes informa‡äes: 
+
+a) O n£mero de votos de cada candidato; 
+
+b) A porcentagem de votos nulos; 
+
+c) A porcentagem de votos brancos; 
+
+d) O candidato vencedor.
+
+m = 0;
+k = 0;
+f = 0;
+n = 0;
+b = 0;
+vencedor = "";
+voto = 0;
+contador = 0;
+maior = 0;
+while(voto != 6):
+	print("Digite 1 para votar no candidato Mauro Ubando.\n");
+	print("Digite 2 para votar no candidato Kay Xadois.\n");
+	print("Digite 3 para votar no candidato Fikaru Riko.\n");
+	print("Digite 4 para votar Nulo.\n");
+	print("Digite 5 para votar em Branco.\n");
+	print("Digite 6 para Terminar.\n");
+	voto = int(input("Entre com seu voto: "));
+	contador = contador + 1;
+	if(voto == 1):
+		m = m + 1;
+	elif(voto == 2):
+		k = k + 1;
+	elif(voto == 3):
+		f = f + 1;
+	elif(voto == 4):
+		n = n + 1;
+	elif(voto == 5):
+		b = b + 1;
+
+if(m > maior):
+	maior = m;
+	vencedor = "Mauro Ubando";
+if(f > maior):
+	maior = f;
+	vencedor = "Fikaru Riko";
+if(k > maior):
+	maior = k;
+	vencedor = "Kay Xadois";
+
+porNulo = (n/contador)*100;
+porBranco = (b/contador)*100;
+	
+print(f"Mauro Ubando teve {m} votos\nKay Xadois teve {k} votos\nFikaru Riko teve {f} votos\n");
+print(f"A porcentagem de votos Brancos foi de: {porBranco}%. \nJ  a porcentagem de votos nulos foi de: {porNulo}%\n")
+print(f"O vencedor ‚: {vencedor}");
+ 
+
+4) Fa‡a um programa que mostre a tabuada de um n£mero N (N ser  lido do teclado). 
+
+ n = int(input("Digite um n£mero: "));
+contador = 1;
+while(contador <= 10):
+	res = contador * n;
+	print(f"{contador} * {n} = {res}\n");
+	contador = contador + 1;
+	
+
+5) Foi feita uma pesquisa entre os habitantes de uma regiÆo. Foram coletados os dados de idade, sexo (1/2 - masculino/feminino) e sal rio. Fa‡a um programa que calcule e mostre:
+
+a) A m‚dia dos sal rios do grupo;
+
+b) A maior e a menor idade do grupo;
+
+c) A quantidade de mulheres na regiÆo;
+
+d) A idade e o sexo da pessoa que possui o menor sal rio;
+
+ 
+
+Finalize a entrada de dados ao ser digitada uma idade negativa.
+
+idade = 0;
+sexo = "";
+salario = 0;
+mediaSalario = 0;
+maiorIdade = 0;
+menorIdade = 0;
+mulheres = 0;
+contador = 0;
+pessoaMenorSalario = [idade, sexo, salario];
+continuar = True;
+
+while(continuar):
+	idade = int(input("Digite sua idade: \n"));
+	if(idade < 0):
+		break;
+	if(contador == 0):
+		maiorIdade = idade;
+		menorIdade = idade;
+	if(idade > maiorIdade):
+		maiorIdade = idade;
+	if(idade < menorIdade):
+		menorIdade = idade;
+	sexo = int(input("Digite 1 para Masculino ou 2 para feminino:\n"));
+	if(sexo == 1):
+		sexo = "Masculino";
+	elif(sexo == 2):
+		mulheres = mulheres + 1;
+		sexo = "Feminino";
+	salario = float(input("Digite seu sal rio: \n"));
+	mediaSalario = mediaSalario + salario;
+	
+	if(pessoaMenorSalario[2] > salario):
+		pessoaMenorSalario = [idade, sexo, salario];
+		
+	contador = contador + 1;
+	
+
+
+print(f"A m‚dia dos sal rios do grupo ‚: R${mediaSalario}\n");
+print(f"A maior idade ‚: {maiorIdade}.\nJ  a menor idade ‚: {menorIdade}\n");
+print(f"A quantidade de mulheres ‚: {mulheres}\n");
+print(f"A idade e sexo da pessoa que possui o menor sal rio ‚: {pessoaMenorSalario[0]} anos e sexo: {pessoaMenorSalario[1]}\n")
+
+
+		
+	
